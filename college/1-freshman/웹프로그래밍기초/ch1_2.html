@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습2</title>
+</head>
+<body>
+
+    <!--
+    <mark>'TEXT'</mark> : 노란색 형광펜
+    <span>'TEXT'</span> : 영역설정(one line)
+    <div>'TEXT'</div> : 영역설정(more lines)
+    
+    <ruby>'TEXT'</ruby> : 주석처리 문장
+    <rt>'TEXT'</rt> : ruby 문장위에 주석 삽입
+    * 단일 명령어로 사용하게되면 주석이 아닌 일반 텍스트를 출력
+    
+    <ul type="circle"></ul> : 도형 목록
+    <ol type="1" start="3"></ol> : 순서 목록
+    <li>'TEXT'</li> : 리스트 항목
+    -->
+
+    text<mark>mark</mark>text <br>
+
+    <span style="color: blue;">red</span><br>
+
+    <ruby>ruby<rt>rt</rt></ruby><br>
+    <ruby>single ruby</ruby><br>
+    <rt>single rt</rt><br>
+
+    <ul type="circle">
+        <li>red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ul>
+
+    <ol type="A" start="3">
+        <li>red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ol>
+
+
+<p>루비는 1995년, <ruby>일본의 프로그래머 <rt>마츠모토유키히로</rt></ruby>가 만든 프로그래밍 언어입니다.</p>
+
+<br>
+
+<ul>
+<li>
+    1일차
+
+    <ol type="a">
+        <li>해녀박물관</li>
+        <li>낚시체험</li>
+    </ol>
+</li>
+<li>
+    2일차
+
+    <ol type="1">
+        <li>만장굴</li>
+        <li>용눈이오름</li>
+        <li>카약체험</li>
+    </ol>
+</li>
+</ul>
+
+<br>
+
+<!------------------------------------------------------------------------->
+
+<!--
+    <dl>'TEXT'</dl> : 설명 목록
+    <dt>'TEXT'</dt> : 제목
+    <dd>'TEXT'</dd> : 제목에 대한 설명
+
+    <table></table> : 표
+        border="5" width="80%" cellpadding="20"(내부) cellspacing="20"(외부) bgcolor="pink" align="right"
+    <thead></thead> : 표 내용 제목
+    <tr></tr> : 행
+    <th></th> : 셀(가운데정렬)
+    <td></td> : 셀(일반 텍스트)
+    <tbody></tbody> : 표 내용
+    <tfoot></tfoot> : 
+    <caption></caption> : 표 제목
+-->
+
+<dl>
+    <dt>올레 1코스</dt>
+    
+        <dd>코스 : 시흥 초등학교 옆 - 광치기 해변</dd>
+        <dd>거리 : 14.6km</dd>
+        <dd>난이도 : 중</dd>
+  
+    <dt>올레 2코스</dt>
+  
+        <dd>코스 : 광치기 해변 - 온평 포구</dd>
+        <dd>거리 : 14.5km(4~5시간)</dd>
+        <dd>난이도 : 중</dd>
+
+</dl>
+
+<table border="5" width="80%" cellpadding="20" cellspacing="20" bgcolor="pink" align="right">
+    <caption>표 연습</caption>
+    <thead>
+        <tr bgcolor="red" align="right">
+            <th>th1</th><th>th2</th><th>th3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td bgcolor="green" align="center">td1</td><td>td2</td><td>td3</td>
+        </tr>
+        <tr>
+            <td>td4</td><td>td5</td><td>td6</td>
+        </tr>
+        <tr>
+            <td>td7</td><td>td8</td><td>td9</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>tfoot td</td>
+        </tr>
+    </tfoot>
+</table>
+
+<table border width="70%" height="40%">
+    <tr>
+        <th rowspan="2">대학교</th>
+        <th>학과</th>
+        <th>학부</th>
+    </tr>
+    <tr>
+        <td>컴퓨터학과</td>
+        <td>인공지능학부</td>
+    </tr>
+   
+</table>
+
+<table border width="70%" height="40%">
+    <tr>
+        <th colspan="2">대학교2</th>
+    </tr>
+    <tr>
+        <th>학과</th>
+        <th>학부</th>
+    </tr>
+    </tr>
+    <tr>
+        <td>컴퓨터학과</td>
+        <td>인공지능학부</td>
+    </tr>
+</table>
+
+<table border width="80%" height="50%">
+    <caption>Production Defects</caption>
+    <tr>
+        <td rowspan="2" colspan="2"></th>
+        <th colspan="2">Defects/Hr.</th>
+    </tr>
+    <tr>
+        <th>Size</th>
+        <th>Weight</th>
+    </tr>
+    <tr>
+        <th rowspan="2">Product Line</th>
+        <th>Widgets</th>
+        <td>2.1</td>
+        <td>1.2</td>
+    </tr>
+    <tr>
+        <th>Cyberbits</th>
+        <td>0.2</td>
+        <td>0.1</td>
+    </tr>
+</table>
+</body>
+</html>
