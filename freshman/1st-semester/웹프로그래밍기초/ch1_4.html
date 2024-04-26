@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4월 3일 (5주차)</title>
+</head>
+<body>
+    
+    <!--
+        target = "_blank" : 새창으로 이동, "_self" : 현재창에서 열기
+        readonly : 입력필드 사용불가능 (값이 서버에 전송됨)
+        disabled : 입력필드 사용불가능 (값이 서버에 전송되지 않음)
+    -->
+
+    <img src="./images/child.png" alt="" usemap="favorites">
+    <map name="favorites">
+        <area shape="rect" coords="10,10,160,200" 
+        href="https://www.naver.com/" alt="네이버" target="_blank">
+    </map>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <form action="">
+        <label for="user-id">id : </label>
+        <input type="text" id="user-id" size="20"
+            value="Jo" maxlength="8">
+    </form>
+    <br>
+    <label for="user-pw">password : </label>
+    <input type="password" name="pw" size="20" 
+        maxlength="8">
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <form action="">
+        <fieldset>
+            <legend>login</legend>
+            <ul>
+                <li>
+                    <label for="id">id : </label>
+                    <input type="text" name="" id="id" size="16" maxlength="16">
+                </li> <br>
+                <li>
+                    <label for="pwd">password : </label>
+                    <input type="password" id="pwd" size="16" maxlength="16">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<form action="">
+    <label for="">insert : </label>
+    <input type="search" name="keyword"><br><br>
+
+    <label for="">email : </label>
+    <input type="email" name="mail"><br><br>
+
+    <label for="">URL : </label>
+    <input type="url" name="url" id="" value="https://"><br><br>
+    
+    <label for="">tel : </label>
+    <input type="tel" name="tel"><br><br>
+
+    <input type="submit" value="check">
+    <input type="reset" value="cancel">
+</form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<form action="">
+    <label for="">radio button</label><br>
+    <input type="radio" name="ra-lecture" value="html"> HTML <br>
+    <input type="radio" name="ra-lecture" value="css" checked> CSS <br>
+    <input type="radio" name="ra-lecture" value="java"> JAVA <br>
+    <input type="radio" name="ra-lecture" value="cpp"> CPP <br>
+</form>
+
+<br>
+
+<form action="">
+    <label for="">check box</label><br>
+    <input type="checkbox" name="ck-lecture" value="html" checked> HTML <br>
+    <input type="checkbox" name="ck-lecture" value="css"> CSS <br>
+    <input type="checkbox" name="ck-lecture" value="java"> JAVA <br>
+    <input type="checkbox" name="ck-lecture" value="cpp" disabled> CPP <br>
+</form>
+
+<br>
+
+<form action="">
+    <label for="">select option</label><br>
+    <select name="fruit" id="">
+        <option value="apple">apple</option>
+        <option value="orange">orange</option>
+        <option value="strawberry" selected>strawberry</option>
+        <option value="peach">peach</option>
+    </select>
+</form>
+
+<br>
+
+<form action="">
+    <label for="">multiple option</label><br>
+    <select name="fruit" id="" size=2 multiple>
+        <option value="apple">apple</option>
+        <option value="orange" selected>orange</option>
+        <option value="strawberry" selected>strawberry</option>
+        <option value="peach">peach</option>
+    </select>
+</form>
+
+<br>
+
+<form action="">
+    <label for="">text area & button</label><br>
+    <textarea name="message" id="" cols="20" rows="5">input text</textarea>
+    <button type="button" oneclick="alert('push button!')">push</button>
+</form>
+
+</body>
+</html>
