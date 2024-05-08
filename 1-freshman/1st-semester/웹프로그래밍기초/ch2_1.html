@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>ch2_1</title>
     <!--
         CSS로 작성된 코드를 스타일 시트(style sheet)라고 부름
     -->
-
 </head>
 
 <body>
@@ -36,12 +34,136 @@
     <hr>
     <p>저는 체조 선수 소연재입니다. 음악을 들으면서 책읽기를 좋아합니다. 김치 찌개와 막국수 무척 좋아합니다.</p>
 -->
-    
+<!--
     <link rel="stylesheet" href="ch2_1.css" type="text/css">
 
     <h3>소연재</h3>
     <hr>
     <p>저는 체조 선수 소연재입니다. 음악을 들으면서 책읽기를 좋아합니다. 김치 찌개와 막국수 무척 좋아합니다.</p>
+-->
+<!--
+    범위 내 스타일 지정
+    <style>
+
+    </style>
+    <div>
+        <h2>이지스퍼블리싱의 미션</h2>
+        
+        <p>사람에게 구체적으로 도움을 주는 책,<br>
+        우리는 열심히 사는 사람들에게 도움이 되고 싶습니다.<br>
+        
+        <p>우리는 책을 출간하기 전에 질문할 것입니다.</p>
+        
+        <p>"이 책이 사람들에게 도움이 됩니까?"</p>
+    </div>
+-->
+<!--
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+
+    <h3>부모 스타일 상속</h3>
+    <hr>
+    <p>자식 태그는 부모의 스타일을 <em>상속</em> 받는다.</p>
+-->
+<!--
+    <style>
+        h3, li {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+
+    안녕하세요.
+
+    <h3>태그 이름 셀렉터</h3>
+
+    <ul>
+        <li>red</li>    
+        <li>green</li>
+        <li>blue</li>
+    </ul>
+-->
+<!--
+    클래스 . 설정
+    <style>
+        .main{
+            color: yellow;
+            font-size: 20px;
+        }
+        .sub{
+            color: red;
+        }
+    </style>
+    
+    안녕하세요.
+
+    <h3 class="main">태그1</h3>
+    <h3 class="main1">태그2</h3>
+
+    <ul>
+        <li class="sub">red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ul>
+-->
+<!--
+    <style>
+        .a{
+            color : yellow;
+            font-size : 20px;
+        }
+        
+        h3.a{
+            color : red;
+            font-size : 20px;
+        }
+    </style>
+
+    <h3 class="a">태그1</h3>
+    <h3>태그2</h3>
+
+    <ul>
+        <li class="a">red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ul>
+-->
+    <style>
+    
+        * {
+            margin: 20px auto;
+        }
+        p {
+            font-size:0.9em;  /* 글자 크기 */
+            line-height:2.0;  /* 줄간격 */
+        }
+        .yellotext {
+            color:yellow;
+        }
+        h2.accent {
+            background-color:pink;
+            color:red;
+            padding:5px;
+        }
+        .greentext {
+            color:green;
+        }
+        .boldtext {
+            font-weight: bold;
+            font-size:25px; 
+        }
+        </style>
+        <div>
+            <h1>회사 소개</h1>
+            <h2 class="accent">h2 1</h2>
+            <p>책에는 <span class="greentext boldtext">span 1</span> </p>
+            <p>  IT 실용 도서와 학습 분야 도서입니다. </p>       
+            <h2 class="yellotext">h2 2</h2>
+            <p>사람에게  <span class="boldtext">span 2</span> 을 주는 책<br></p>
+        </div>
 
 </body>
 
