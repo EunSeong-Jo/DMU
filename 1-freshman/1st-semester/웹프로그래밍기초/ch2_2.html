@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12주차</title>
+</head>
+<body>
+<!--
+    class 선택자와 id(#) 선택자의 차이
+        공통점 : 요소의 특정 부분에만 스타일 적용
+        차이점 : 클래스 선택자 : 문서 안에서 여러 번 반복
+    
+        id 선택자 : 문서 안에서 한번만 사용
+-->
+<!--
+<style>
+    #list{
+        color:yellow; font-size:20px
+    }
+    
+    .sub{color:red;}
+</style>
+안녕하세요.
+<h3>태그 이름 셀렉터</h3>
+
+<ul id = "list">
+    <li class = "sub">red</li>
+    <li>green</li>
+    <li class = "sub">blue</li>
+</ul>
+-->
+
+<!--
+    자식셀럭터
+    - 부모 자식 관계인 두 셀렉터를 ‘>’ 기호로 조합
+
+    자손 셀렉터
+    - 자손 관계인 2 개 이상의 태그 나열 (공백구분)
+    - 자손이란 자식과 그 후손 모두 포함
+
+    몇층까지 적용되는가
+-->
+<!--
+<style>
+    div > strong {
+        color : skyblue
+    }
+    ul strong {
+        color : green
+    }
+</style>
+
+<div>2학기<strong>학습내용</strong></div>
+
+<strong>strong</strong>
+
+<ul>
+    
+    <li><i><strong>red</strong></i></li>
+    <li><strong>green</strong></li>
+    <li>blue</li>
+</ul>
+-->
+
+<!--
+<style>
+    div#m_box{
+        width:220px; 
+        height: 150px; 
+        border: 1px solid red
+    }
+    div.box{
+        background-color: blue;
+    }
+</style>
+
+<div id = "m_box">m_box 아이디의 div 입니다.</div>
+<div class = "box">box 클래스의 div 입니다.</div>
+
+<span id = "m_box">m_box 아이디의 span 입니다.</span>
+<span class = "box">box 클래스의 span 입니다.</span>
+-->
+
+<!--
+<div style="width: 150px; 
+            height: 80px; 
+            background-color: #d2f4ff; 
+            border: 2px solid #09c;">
+    150x80
+</div>
+    
+    <div style="width: 60px; 
+                height: 200px; 
+                background-color: #fde6ff; 
+                border: 2px solid #90C;">
+
+    90x120
+</div>
+-->
+
+<!--
+위부터 시계방향으로 회전하여 위 오른쪽 아래 왼쪽 순서로 설정
+
+<style>
+    div{
+        margin-bottom: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: white;
+    }
+</style>
+
+<h3>CSS3 색 활용</h3>
+<hr>
+
+<div style="background-color:deepskyblue">
+    deepskyblue(#00BFFF)</div>
+
+<div style="background-color:brown">
+    brown(#A52A2A)</div>
+
+<div style="background-color:fuchsia">
+    fuchsia(#FF00FF)</div>
+
+<div style="background-color:darkorange">
+    darkorange(#FF8C00)</div>
+
+<div style="background-color:#008B8B">
+    darkcyan(#008B8B)</div>
+
+<div style="background-color:#6B8E23">
+    olivedrab (#6B8E23)</div>
+-->
+
+<!--
+<style>
+    body{
+        background : ghostwhite;
+    }
+    span{
+        background: blue;
+    }
+    div.box{
+        background: yellow;
+        border-width: 10px;
+        border-style: solid;
+        border-color: red;
+
+        margin: 40px;
+        border-width: 5px;
+        padding: 20px;
+    }
+</style>
+
+<div class="box">
+    <span>DIVDIVDIV</span>
+</div>
+-->
+
+<!--
+<style>
+    #box{
+        padding: 5px;
+        border: 4px dotted green;
+        border-bottom: 5px solid blue;    
+    }
+</style>
+
+<div id="box">
+    Simple Bodrder Example
+</div>
+-->
+
+<!--
+대각선으로 픽셀값 적용
+
+<style>
+    p{
+        background: green;
+        width: 300px;
+        padding: 20px;
+    }
+    #round1{
+        border-radius: 50px;
+    }
+    #round2{
+        border-radius: 0px 20px 40px 60px;
+    }
+    #round3{
+        border-radius: 0px 20px 40px;
+    }
+    #round4{
+        border-radius: 0px 20px;
+    }
+    #round5{
+        border-radius: 50px;
+        border-style: dotted;
+        border-color: red;
+    }
+</style>
+
+<h3>둥근 모서리 테두리</h3>
+<hr>
+
+<p id="round1">50px</p>
+<p id="round2">0px, 20px, 40px, 60px</p>
+<p id="round3">반지름 0, 20, 40, 20 둥근 모서리</p>
+<p id="round4">반지름 0, 20, 0, 20 둥근 모서리</p>
+<p id="round5">반지름 50의 둥근 점선 모서리</p>
+-->
+
+</body>
+</html>
