@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13주차</title>
+</head>
+<body>
+
+<!--
+1. red, blue등 이미 정의된 색
+2. #000, #FFFFFF 등의 16진수 색상 코드
+3. rgb(255, 255, 255) 등의 rgb 색상
+4. rgba(200, 100, 150, 0.5) 등의 알파(투명도)가 적용된 rgba 색상
+- color 속성은 위 목록등의 값을 사용할 수 있으며, 기본값은 inherit(흰색)
+
+<div style="color: red;">text 1</div>
+<div style="color: inherit;">text 1</div>
+<div style="color: ;">text 1</div>
+<div style="color: ;">text 1</div>
+-->
+
+<!--
+<style>
+    #text1{font-size: 37px;}
+    #text2{font-size: 28px;}
+    #text3{font-size: 19px;}
+
+    .bold{
+        font-weight: bold;
+        text-decoration: overline;
+    }
+    .italic{
+        font-style: italic;
+        text-decoration: line-through;
+    }
+    .jinji{
+        font-style: italic;
+        font-family: '궁서', '굴림';
+        text-decoration: underline;
+    }
+    #text4{
+        font: italic bold 20px serif;
+        text-align: center;
+    }
+    # px, em 사용가능
+    p{text-indent: 100px;}
+</style>
+
+<p>p tag</p>
+
+<div id="text1">37px</div>
+<div id="text2">28px</div>
+<div id="text3">19px</div>  <br>
+
+<div class="bold">굵은 글씨</div>
+<div class="italic">기울인 글</div>
+<div class="jinji">진지한 글꼴</div>    <br>
+
+<div id="text4">There's no books on my backpack</div>
+-->
+
+<style>
+    #box1-1{
+        background-color: green;
+    }
+    #box1-2{
+        background-color: #000000;
+        width: 400px;
+        height: 350px;
+        margin-top: 30px;
+        background-image: url(./images/daum.png);
+        background-repeat: no-repeat;
+    }
+</style>
+
+<div id="box1-1">box 1 </div>
+<div id="box1-2">box 2 <br> boxbox</div>
+
+</body>
+</html>
