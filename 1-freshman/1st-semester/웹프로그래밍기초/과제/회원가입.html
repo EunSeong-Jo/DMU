@@ -5,76 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
 </head>
+<style>
+    .login fieldset legend{
+        width: 80px;
+        height: 30px;
+        background: darkslateblue;
+        color: white;
+        text-align: center;
+    }
+    .login fieldset{
+        padding: 20px;
+        border: 1px solid blue;
+        
+    }
+    .login{
+        width: 600px;
+        margin: 100px auto;
+    }
+    input[type=text]{
+        background-color: red; color: yellow;
+    }
+</style>
 <body>
-    <form action="table.jsp" method="post">
-        <table border="1" cellpadding="5" align="left">
-            <tr>
-                <td align="center">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
-                <td>
-                    <input type="text" name="name">
-                </td>
-            </tr>
-
-            <tr>
-                <td>주민등록번호</td>
-                <td>
-                    <input type="text" name="front_num" id="" maxlength="6">
-                    -
-                    <input type="text" name="back_num" id="" maxlength="7">
-                </td>
-            </tr>
+    <form class='login' action="table.jsp" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
             
-            <tr>
-                <td>전공</td>
-                <td>
-                    <select name="major" id="" size="1">
-                        <option value="인공지능소프트웨어학과">인공지능소프트웨어학과</option>
-                        <option value="컴퓨터공학과">컴퓨터공학과</option>
-                        <option value="산업공학과">산업공학과</option>
-                        <option value="전자공학과">전자공학과</option>
-                    </select>
-                </td>
-            </tr>
+            <table border="1" cellpadding="5" align="left">
+                <tr>
+                    <td align="center">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
+                    <td>
+                        <input type="text" name="name">
+                    </td>
+                </tr>
 
-            <tr>
-                <td>사용가능 플랫폼</td>
-                <td>
-                    <select name="platform" id="" multiple size="3">
-                        <option value="Window PC">Window PC</option>
-                        <option value="Window server">Window server</option>
-                        <option value="UNIX">UNIX</option>
-                        <option value="IBM OS">IBM OS</option>
-                        <option value="RS">RS</option>
-                    </select>
-                </td>
-            </tr>
+                <tr>
+                    <td>주민등록번호</td>
+                    <td>
+                        <input type="text" name="front_num" id="" maxlength="6">
+                        -
+                        <input type="text" name="back_num" id="" maxlength="7">
+                    </td>
+                </tr>
 
-            <tr>
-                <td>연락처</td>
-                <td>
-                    <select name="phone_num" id="" size="1">
-                        <option value="010">010</option>
-                        <option value="02">02</option>
-                        <option value="031">031</option>
-                        <option value="042">042</option>
-                    </select>
-                    -
-                    <input type="text" name="num1" size="4" maxlength="4" id="">
-                    -
-                    <input type="text" name="num2" size="4" maxlength="4">
-                </td>
-            </tr>
+                <tr>
+                    <td>학력</td>
+                    <td>
+                        <input type=radio name="graduate" value="고졸">고졸
+                        <input type=radio name="graduate" value="대졸">대졸
+                        <input type=radio name="graduate" value="대학원졸">대학원졸
+                    </td>
+                </tr>
 
-            <tr>
-                <td>
-                    <input type="submit" value="확인">
-                </td>
-                <td>
-                    <input type="reset" name="" id="" value="취소">
-                </td>
-            </tr>
-        </table>
+                <tr>
+                    <td>전공</td>
+                    <td>
+                        <select name="major" id="" size="1">
+                            <option value="인공지능소프트웨어학과">인공지능소프트웨어학과</option>
+                            <option value="컴퓨터공학과">컴퓨터공학과</option>
+                            <option value="산업공학과">산업공학과</option>
+                            <option value="전자공학과">전자공학과</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>사용가능 플랫폼</td>
+                    <td>
+                        <select name="platform" id="" multiple size="3">
+                            <option value="Window PC">Window PC</option>
+                            <option value="Window server">Window server</option>
+                            <option value="UNIX">UNIX</option>
+                            <option value="IBM OS">IBM OS</option>
+                            <option value="RS">RS</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>연락처</td>
+                    <td>
+                        <select name="phone_num" id="" size="1">
+                            <option value="010">010</option>
+                            <option value="02">02</option>
+                            <option value="031">031</option>
+                            <option value="042">042</option>
+                        </select>
+                        -
+                        <input type="text" name="num1" size="4" maxlength="4" id="">
+                        -
+                        <input type="text" name="num2" size="4" maxlength="4">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="확인">
+                    </td>
+                    <td>
+                        <input type="reset" name="" id="" value="취소">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
     </form>
 
-</body>
+</body> 
 </html>
