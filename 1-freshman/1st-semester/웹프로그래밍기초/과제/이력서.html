@@ -4,38 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이력서</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 20px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+        figure {
+            text-align: 100px;
+            margin: 20px auto;
+        }
+        @media screen and (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 <h1>이력서</h1>
 
-<table border=4 cellpadding=10 width=80%> 
-<figure>1. 인적사항</figure> 
+<table>
+    <figure>&nbsp; 1. 인적사항</figure>
     <tr>
-        <th rowspan=4 colspan=2 width=20%><img src="daum.png"></th>  
-        <th width=300> 성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
-        <td width=800>조은성</th>
+        <th rowspan="4" colspan="2" width="20%"><img src="../images/사진.png"></th>  
+        <th width="300">성명</th>
+        <td width="800">조은성</td>
     </tr>
     <tr>
-        <th> 주민등록번호</th>
-        <td>******-******</th>
-        </tr>
+        <th>주민등록번호</th>
+        <td>******-******</td>
     </tr>
     <tr>
-        <th>연&nbsp;&nbsp;&nbsp;&nbsp;락&nbsp;&nbsp;&nbsp;&nbsp;처</th>
+        <th>연락처</th>
         <td>010-0000-0000</td>
     </tr>
     <tr>
-        <th>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
+        <th>주소</th>
         <td>서울특별시 OO구 OO동</td>
     </tr>
 </table>
 
-<table border=4 cellpadding=10 width=80%> 
-<figure>2. 학력사항</figure> 
+<table>
+    <figure>&nbsp; 2. 학력사항</figure>
     <tr>
-        <th width=300>기간</th>
-        <td width=800>2024년 03월 04일</td>
-        </th>
+        <th width="300">기간</th>
+        <td width="800">2024년 03월 04일</td>
     </tr>
     <tr>
         <th>학교명</th>
@@ -47,11 +86,11 @@
     </tr>
 </table>
 
-<table border=4  cellpadding=10 width=80%> 
-<figure>3. 경력사항</figure> 
+<table>
+    <figure>&nbsp; 3. 경력사항</figure>
     <tr>
-        <th width=300>기간</th>
-        <td width=800>O년</td>
+        <th width="300">기간</th>
+        <td width="800">O년</td>
     </tr>
     <tr>
         <th>회사명</th>
@@ -67,11 +106,11 @@
     </tr>
 </table>
 
-<table border=4 cellpadding=10 width=80%>
-<figure>4. 자격증및 어학능력</figure>
+<table>
+    <figure>&nbsp; 4. 자격증및 어학능력</figure>
     <tr>
-        <th rowspan=4 width=300 align=center>자격증 및 어학</th>
-        <td width=800>(예정) OOOO</td>
+        <th rowspan="4" width="300" align="center">자격증 및 어학</th>
+        <td width="800">(예정) OOOO</td>
     </tr>
     <tr>
         <td>(예정) OOOOO</td>
@@ -79,11 +118,9 @@
     <tr>
         <td>&nbsp;</td>
     </tr>
-    
     <tr>
         <td>&nbsp;</td>
     </tr>
-
 </table>
 </body>
 </html>

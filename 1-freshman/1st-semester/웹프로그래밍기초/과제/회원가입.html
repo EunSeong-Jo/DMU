@@ -4,60 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <style>
+        /* CSS 스타일 설정 */
+        body {
+            background-color: #121212; /* 배경색 설정 */
+            color: #ffffff; /* 글자색 설정 */
+            font-family: 'Arial', sans-serif; /* 글꼴 설정 */
+            margin: 0; /* 바깥 여백 제거 */
+            padding: 0; /* 안쪽 여백 제거 */
+        }
+        .login {
+            width: 600px; /* 로그인 폼의 너비 설정 */
+            margin: 100px auto; /* 로그인 폼을 수평 중앙에 배치 */
+            padding: 20px; /* 안쪽 여백 설정 */
+            border: 1px solid #333; /* 테두리 설정 */
+            border-radius: 10px; /* 테두리의 모서리 둥글게 설정 */
+            background-color: #1e1e1e; /* 배경색 설정 */
+        }
+        fieldset {
+            border: 1px solid #333; /* fieldset의 테두리 설정 */
+            border-radius: 10px; /* fieldset의 모서리 둥글게 설정 */
+            padding: 20px; /* 안쪽 여백 설정 */
+        }
+        legend {
+            width: 80px; /* legend의 너비 설정 */
+            height: 30px; /* legend의 높이 설정 */
+            background: darkslateblue; /* 배경색 설정 */
+            color: white; /* 글자색 설정 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            border-radius: 10px; /* 모서리 둥글게 설정 */
+        }
+        table {
+            width: 100%; /* 테이블의 너비 설정 */
+            border-collapse: collapse; /* 테이블의 경계를 합치도록 설정 */
+            margin: 20px 0; /* 테이블 위아래 여백 설정 */
+        }
+        td {
+            padding: 10px; /* 셀의 안쪽 여백 설정 */
+            border: 1px solid #333; /* 셀의 테두리 설정 */
+        }
+        input[type="text"], input[type="radio"], select {
+            width: 100%; /* 입력 요소의 너비 설정 */
+            padding: 10px; /* 입력 요소의 안쪽 여백 설정 */
+            margin: 10px 0; /* 입력 요소의 위아래 여백 설정 */
+            border: 1px solid #333; /* 입력 요소의 테두리 설정 */
+            border-radius: 5px; /* 입력 요소의 모서리 둥글게 설정 */
+            background-color: #2c2c2c; /* 배경색 설정 */
+            color: #ffffff; /* 글자색 설정 */
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 5px; /* 버튼의 안쪽 여백 설정 */
+            border: none; /* 버튼의 테두리 제거 */
+            border-radius: 5px; /* 버튼의 모서리 둥글게 설정 */
+            background-color: darkslateblue; /* 배경색 설정 */
+            color: #ffffff; /* 글자색 설정 */
+            cursor: pointer; /* 마우스 커서를 포인터로 설정 */
+            width: 10%; /* 버튼의 너비 설정 */
+            float: right; /* 버튼을 오른쪽으로 부유시킴 */
+            margin-left: 10px; /* 버튼 사이의 간격 설정 */
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #bb86fc; /* 호버 시 배경색 변경 */
+        }
+    </style>
+    <script>
+        // JavaScript 함수 정의
+        function redirectToIntroduction(event) {
+            event.preventDefault(); // 기본 동작 방지
+            parent.loadIntroduction(); // 부모 페이지의 loadIntroduction 함수 호출
+        }
+    </script>
 </head>
-<style>
-    .login fieldset legend{
-        width: 80px;
-        height: 30px;
-        background: darkslateblue;
-        color: white;
-        text-align: center;
-    }
-    .login fieldset{
-        padding: 20px;
-        border: 1px solid blue;
-
-    }
-    .login{
-        width: 600px;
-        margin: 100px auto;
-    }
-</style>
 <body>
-    <form class='login' action="table.jsp" method="post">
+    <!-- 회원가입 폼 -->
+    <form class="login" onsubmit="redirectToIntroduction(event);">
+        <!-- 회원가입 정보를 담는 fieldset -->
         <fieldset>
+            <!-- 회원가입 제목 -->
             <legend>회원가입</legend>
-
-            <table border="1" cellpadding="5" align="left">
+            <!-- 회원가입 정보를 표시하는 테이블 -->
+            <table>
+                <!-- 이름 입력 -->
                 <tr>
-                    <td align="center">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
+                    <td align="center">이름</td>
                     <td>
-                        <input type="text" name="name">
+                        <input type="text" name="name" maxlength="10" style="width: 40%;">
                     </td>
                 </tr>
-
+                <!-- 주민등록번호 입력 -->
                 <tr>
-                    <td>주민등록번호</td>
+                    <td align="center">주민등록번호</td>
                     <td>
-                        <input type="text" name="front_num" id="" maxlength="6">
+                        <input type="text" name="front_num" maxlength="6" style="width: 40%;">
                         -
-                        <input type="text" name="back_num" id="" maxlength="7">
+                        <input type="text" name="back_num" maxlength="7" style="width: 40%;">
                     </td>
                 </tr>
-
+                <!-- 학력 선택 -->
                 <tr>
-                    <td>학력</td>
+                    <td align="center">학력</td>
                     <td>
-                        <input type=radio name="graduate" value="고졸">고졸
-                        <input type=radio name="graduate" value="대졸">대졸
-                        <input type=radio name="graduate" value="대학원졸">대학원졸
+                        <input type="radio" name="graduate" style="width: 30px;" value="고졸">고졸
+                        <input type="radio" name="graduate" style="width: 30px;" value="대졸">대졸
+                        <input type="radio" name="graduate" style="width: 30px;" value="대학원졸">대학원졸
                     </td>
                 </tr>
-
+                <!-- 전공 선택 -->
                 <tr>
-                    <td>전공</td>
+                    <td align="center">전공</td>
                     <td>
-                        <select name="major" id="" size="1">
+                        <select name="major">
                             <option value="인공지능소프트웨어학과">인공지능소프트웨어학과</option>
                             <option value="컴퓨터공학과">컴퓨터공학과</option>
                             <option value="산업공학과">산업공학과</option>
@@ -65,11 +121,11 @@
                         </select>
                     </td>
                 </tr>
-
+                <!-- 사용 가능한 플랫폼 선택 -->
                 <tr>
-                    <td>사용가능 플랫폼</td>
+                    <td align="center">사용가능 플랫폼</td>
                     <td>
-                        <select name="platform" id="" multiple size="3">
+                        <select name="platform" multiple size="3">
                             <option value="Window PC">Window PC</option>
                             <option value="Window server">Window server</option>
                             <option value="UNIX">UNIX</option>
@@ -78,34 +134,27 @@
                         </select>
                     </td>
                 </tr>
-
+                <!-- 연락처 입력 -->
                 <tr>
-                    <td>연락처</td>
+                    <td align="center">연락처</td>
                     <td>
-                        <select name="phone_num" id="" size="1">
+                        <select name="phone_num" style="width: 20%;">
                             <option value="010">010</option>
                             <option value="02">02</option>
                             <option value="031">031</option>
                             <option value="042">042</option>
                         </select>
                         -
-                        <input type="text" name="num1" size="4" maxlength="4" id="">
+                        <input type="text" name="num1" size="4" maxlength="4" style="width: 25%;">
                         -
-                        <input type="text" name="num2" size="4" maxlength="4">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="submit" value="확인">
-                    </td>
-                    <td>
-                        <input type="reset" name="" id="" value="취소">
+                        <input type="text" name="num2" size="4" maxlength="4" style="width: 25%;">
                     </td>
                 </tr>
             </table>
+            <!-- 확인 및 취소 버튼 -->
+            <input type="submit" value="확인">
+            <input type="reset" value="취소" onclick="redirectToIntroduction(event);">
         </fieldset>
     </form>
-
-</body> 
+</body>
 </html>
