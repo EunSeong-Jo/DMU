@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의소개</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        a {
+            color: #bb86fc;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        td {
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background-color: #1e1e1e;
+        }
+        a[href="#top"] {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #bb86fc;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        a[href="#top"]:hover {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        .signup-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: darkslateblue;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .signup-button:hover {
+            background-color: #bb86fc;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            background-color: #1e1e1e;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openModal() {
+            document.getElementById('resumeModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('resumeModal').style.display = 'none';
+        }
+        function redirectToSignup() {
+            parent.loadSignup();
+        }
+    </script>
+</head>
+<body>
+    <button class="signup-button" onclick="redirectToSignup()">회원가입</button>
+    <a name="top"></a>
+    <div class="section">
+        <a href="#aa">나의소개</a><br>
+        <a href="#bb">좋아하는 노래</a><br>
+        <a href="#cc">좋아하는 가수</a><br>
+    </div>
+
+    <div class="section" id="aa">
+        <a name="aa">나의 소개</a><br>
+        <table>
+            <tr>
+                <td width="200"><img src="../images/사진.png" alt="이미지"></td>
+                <td width="400">
+                    <a onclick="openModal()">이력서</a> <br><br>
+                    이름 : 조은성 <br><br>
+                    키 : OOOcm <br><br>
+                    몸무게 : OOkg <br><br>
+                </td>
+            </tr>
+        </table>
+        <a href="#top">위로</a>
+    </div>
+
+    <div class="section" id="bb">
+        <a name="bb">좋아하는 노래</a><br>
+        <table>
+            <tr>
+                <td width="200"><img src="../images/노래.png" alt="이미지"></td>
+                <td width="400"><br>
+                    좋아하는 노래 1 : song 1 <br><br>
+                    좋아하는 노래 2 : song 2 <br><br>
+                    좋아하는 노래 3 : song 3 <br><br>
+                </td>
+            </tr>
+        </table>
+        <a href="#top">위로</a>
+    </div>
+
+    <div class="section" id="cc">
+        <a name="cc">좋아하는 가수</a><br>
+        <table>
+            <tr>
+                <td width="200"><img src="../images/가수.png" alt="이미지"></td>
+                <td width="400"><br>
+                    좋아하는 가수 1 : singer 1 <br><br>
+                    좋아하는 가수 2 : singer 2 <br><br>
+                    좋아하는 가수 3 : singer 3 <br><br>
+                </td>
+            </tr>
+        </table>
+        <a href="#top">위로</a>
+    </div>
+
+    <!-- The Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe src="이력서.html" style="width:100%; height:80vh;"></iframe>
+        </div>
+    </div>
+</body>
+</html>

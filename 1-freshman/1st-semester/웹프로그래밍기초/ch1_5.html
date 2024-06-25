@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="test.jsp">
+        <input type="data" name="start_day">
+        <br><br>
+        <input type="time" name="birth_time">
+        <input type="datetime-local" name="start_time">
+        <input type="month" name="birth_month" id="">
+        <input type="week" name="birth_week">
+        <br><br>
+        <input type="submit" value="확인">
+        <br><br>
+        <input type="reset" value="취소">
+    </form>
+
+    <br><br>
+
+    <!--
+        1)autofocus - focus = 커서
+
+        - 페이지를 불러오자마자 원하는 폼 요소에 마우스 커서 표시 
+
+        -autofocus: 페이지를 불러오자마자 폼에서 원하는 요소에 마우스 포인터를 표시
+
+        2)placeholder
+
+        - 입력란에 표시하는 힌트로, 필드를 클릭하면 사라짐
+
+        --placeholder: 입력란에 적당한 힌트 내용을 표시해 그 필드를 클릭하면 내용이 사라짐
+    -->
+
+    <form action="test2.jsp">
+        <label for="user_name">입력커서 -></label>
+        <input type="text" name="" id="user_name" 
+            autofocus required placeholder="힌트를 표시해줌">
+            <br><br>
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+    </form>
+
+    <br><br>
+
+    <form action="">
+        <label for="">83%</label>
+        <progress value="50" max="60"></progress>
+        <br><br>
+        <label for="">50%</label>
+        <progress value="50" max="100"></progress>
+    </form>
+
+    <br><br>
+
+    <form action="table.jsp" method="post">
+        <table border="1" cellpadding="5" align="left">
+            <tr>
+                <td align="center">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>주민등록번호</td>
+                <td>
+                    <input type="text" name="front_num" id="" maxlength="6">
+                    -
+                    <input type="text" name="back_num" id="" maxlength="7">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>전공</td>
+                <td>
+                    <select name="major" id="" size="1">
+                        <option value="인공지능소프트웨어학과">인공지능소프트웨어학과</option>
+                        <option value="컴퓨터공학과">컴퓨터공학과</option>
+                        <option value="산업공학과">산업공학과</option>
+                        <option value="전자공학과">전자공학과</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>사용가능 플랫폼</td>
+                <td>
+                    <select name="platform" id="" multiple size="3">
+                        <option value="Window PC">Window PC</option>
+                        <option value="Window server">Window server</option>
+                        <option value="UNIX">UNIX</option>
+                        <option value="IBM OS">IBM OS</option>
+                        <option value="RS">RS</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>연락처</td>
+                <td>
+                    <select name="phone_num" id="" size="1">
+                        <option value="010">010</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="042">042</option>
+                    </select>
+                    -
+                    <input type="text" name="num1" size="4" maxlength="4" id="">
+                    -
+                    <input type="text" name="num2" size="4" maxlength="4">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="확인">
+                </td>
+                <td>
+                    <input type="reset" name="" id="" value="취소">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <input type="text" name="department" value="computer" readonly>
+    <input type="text" name="department" value="computer" disabled>
+
+</body>
+</html>

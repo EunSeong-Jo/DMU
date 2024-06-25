@@ -1,0 +1,13 @@
+/* ch2_1.css */
+
+body {
+    background-color : pink;    /* 배경색상 */
+    color : blueviolet;     /* 글자색상 */   
+    margin-left : 30px;     /* 왼쪽여백 */
+    margin-right : 30px;    /* 오른쪽여백 */
+} 
+
+h3 {
+    text-align : center;     /* 정렬 */
+    color : darkred;
+}
