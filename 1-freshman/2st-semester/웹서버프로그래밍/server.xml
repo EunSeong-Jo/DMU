@@ -1,2 +1,0 @@
-<Connector port="80" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
-<Context path="" docBase="/workspaces/DMU/1-freshman/2st-semester/웹서버프로그래밍/"></Context>
