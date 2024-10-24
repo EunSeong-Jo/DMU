@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2> 학생 정보 입력</h2>
+
+<form method="post" action="1016.jsp">
+
+학번 : <input type="text" name="studentNum"><p>
+
+전공 : <select multiple name="major">
+<option SELECTED value="전산과">전산과</option>
+<option value="국문과">국문과</option>
+<option value="기계과">기계</option>
+<option value="자유전공과">자유전공과</option>
+<option value="경영학과">경영학과</option>
+</select><p>
+
+<!-- <input type="submit" value="보내기">
+</form> -->
+
+<br> ---------------------------------------- <br>
+
+<h2> 취미와 가보고 싶은 국가</h2>
+
+<!-- <form method="post" action="1016.jsp"> -->
+
+1. 좋아하는 취미를 선택하시오. <p>
+영화 <input type="checkbox" name="hobby" value="영화"><br>
+독서 <input type="checkbox" name="hobby" value="독서"><br>
+스키 <input type="checkbox" name="hobby" value="스키"><br>
+자전거 <input type="checkbox" name="hobby" value="자전거"> <p> <hr>
+
+2. 여행하고 싶은 국가를 하나 선택하시오. <p>
+영국 <input type="radio" name="country" value="영국" checked><br>
+미국 <input type="radio" name="country" value="미국"><br>
+브라질 <input type="radio" name="country" value="브라질"><br>
+터키 <input type="radio" name="country" value="터키"> <p>
+
+<!-- <input type="submit" value="보내기">
+</form> -->
+
+<br> ---------------------------------------- <br>
+
+<h1>기술정보 이력서</h1>
+
+<!-- <form method=post action="home3.jsp"> -->
+<table border=1 cellpadding=5 align=left>
+
+<tr>
+    <td>이름</td>
+    <td><input type=text name="name"></td>
+</tr>
+<tr>
+    <td>주민등록번호</td>
+    <td><input type=text name="jnum1"> - <input type=text name="jnum2"></td>
+</tr>
+<tr>
+    <td>학력</td>
+    <td>
+        <input type=radio name="graduate" value="고졸">고졸
+        <input type=radio name="graduate" value="대졸">대졸
+        <input type=radio name="graduate" value="대학원졸">대학원졸
+    </td>
+</tr>
+<tr>
+    <td>전공</td>
+    <td><select name="major2" size=1>
+            <option value="컴퓨터공학과">컴퓨터공학과</option>
+            <option value="산업공학과">산업공학과</option>
+            <option value="전자공학과">전자공학과</option>
+            </select>
+    </td>
+</tr>
+<tr>
+    <td>사용가능 플랫폼</td>
+    <td><select multiple name="platform" size=3>
+            <option value="Windows PC">Windows 계열 PC </option>
+            <option value="Windows 계열 서버">Windows 계열 서버 </option>
+            <option value="UNIX">UNIX</option>
+            <option value="IBM OS/390">IBM OS/390</option>
+            <option value="RS/6000">RS/6000</option>
+        </select>
+    </td>
+</tr>
+<tr>
+	<td><input type=submit value="확인"></td>
+	<td><input type=reset value="취소"></td>
+</tr>
+</table>
+
+</form>
+
+</body>
+</html>
