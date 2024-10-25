@@ -1,4 +1,4 @@
-package ch.sec07;
+package ch.sec05;
 
 public class multidimensionalarraybynew {
 

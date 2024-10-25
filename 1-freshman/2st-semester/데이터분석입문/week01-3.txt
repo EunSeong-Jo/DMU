@@ -1,0 +1,32 @@
+1. `sys` 패키지:
+   - `sys.version`: Python 버전을 출력합니다.
+   - `sys.platform`: 현재 실행 중인 플랫폼 정보를 출력합니다.
+
+2. `site` 패키지:
+   - `site.getsitepackages()`: 설치된 패키지 경로를 확인합니다.
+
+3. `numpy` 패키지:
+   - `numpy.__version__`: NumPy 버전을 확인합니다.
+
+4. `matplotlib` 패키지:
+   - `matplotlib.__version__`: Matplotlib 버전을 확인합니다.
+   - `%config InlineBackend.figure_format`: 그래프의 해상도를 높이기 위한 설정입니다.
+   - `plt.title()`: 그래프의 제목을 설정합니다.
+   - `plt.plot()`: 선형 그래프를 그립니다.
+   - `plt.show()`: 그래프를 화면에 출력합니다.
+   - `plt.xticks()`: x축의 레이블을 회전시킵니다.
+   - `plt.yticks()`: y축의 레이블을 회전시킵니다.
+   - `plt.show()`: 그래프를 화면에 출력합니다.
+
+5. `seaborn` 패키지:
+   - `sns.scatterplot()`: 산점도를 그립니다.
+   - `sns.barplot()`: 막대그래프를 그립니다.
+
+6. `pandas` 패키지:
+   - `.read_csv()`: CSV 파일을 불러와 데이터프레임을 생성합니다.
+     - `encoding`: 파일의 문자 인코딩 방식을 지정합니다.
+     - `index_col`: 특정 열을 데이터프레임의 인덱스로 설정합니다.
+     - `thousands`: 천 단위 구분자를 처리합니다.
+   - `.columns`: 데이터프레임의 컬럼 이름을 설정합니다.
+   - `.head()`: 데이터프레임의 상위 몇 개 행을 출력합니다.
+   - `.index`: 인덱스에서 문자열을 분리하고 첫 번째 단어만 남깁니다.

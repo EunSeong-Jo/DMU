@@ -1,4 +1,4 @@
-package ch.sec06;
+package ch.sec05;
 
 public class arraycreatebynew {
 
