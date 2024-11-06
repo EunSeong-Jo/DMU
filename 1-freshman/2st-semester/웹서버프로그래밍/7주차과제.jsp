@@ -34,7 +34,7 @@
 
    	while ( e.hasMoreElements() ) {
    		String name = e.nextElement();
-   		String [] data = request.getParameterValues(name);
+   		String[] data = request.getParameterValues(name);
 		if (data != null) {
 			for ( String eachdata : data ) 
      			out.println(eachdata + " ");
