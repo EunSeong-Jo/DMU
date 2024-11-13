@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,7 @@
 </head>
 <body>
 
-<a href = "1002_2.jsp?strID=apple&strPwd=a123">로그인</a>
+<b><%=name%></b> 
 
 </body>
 </html>

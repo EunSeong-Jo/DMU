@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ page import="java.util.*"%>
 <%
-String id = request.getParameter("strID");
-String pass = request.getParameter("strPwd");
-
-out.println("아이디 : " + id + "<br>");
-out.println("비밀번호 : " + pass + "<br>");
+   Date date = new Date();
 %>
+<hr>
+include 지시자의 blue 부분입니다.<p>
+<%=date.toLocaleString()%>
 </body>
 </html>

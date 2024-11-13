@@ -6,16 +6,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<%
-String name = request.getParameter("name");
-String color = request.getParameter("color");
+<body>
 
-if(color.equalsIgnoreCase("etc")){
-	out.println(color);
-	color = "gray";
-}
-%>
-<body bgcolor = <%= color %>>
+<p><font color=blue>
+<%=request.getParameter("programming") %>
+</font></p>
 
 </body>
 </html>

@@ -41,5 +41,67 @@ for(int n : num){
 };
 %>
 
+<br> ---------------------------------------- <br>
+
+<%
+request.setCharacterEncoding("euc-kr");
+%>
+
+<%
+String name = request.getParameter("name");
+String addr = request.getParameter("addr");
+String tel = request.getParameter("tel");
+%>
+
+<h2>학생 정보 입력 결과</h2>
+성명 : <%= name %> <br>
+주소 : <%= addr %> <br>
+연락처 : <%= tel %> <br>
+
+<br> ---------------------------------------- <br>
+
+<%
+String id = request.getParameter("strID");
+String pass = request.getParameter("strPwd");
+
+out.println("아이디 : " + id + "<br>");
+out.println("비밀번호 : " + pass + "<br>");
+%>
+
+<br> ---------------------------------------- <br>
+
+<%
+String name = request.getParameter("name");
+String tym = request.getParameter("studentNum");
+String sex = request.getParameter("mw");
+String country = request.getParameter("country");
+
+if(sex.equalsIgnoreCase("man")){
+	sex = "남자";
+}
+else{
+	sex = "여자";
+}
+%>
+
+<h2>학생 정보 입력 결과</h2>
+성명 : <%= name %> <br>
+학번 : <%= tym %> <br>
+성별 : <%= sex %> <br>
+국가 : <%= country %>
+
+<br> ---------------------------------------- <br>
+
+<%
+String name = request.getParameter("name");
+String color = request.getParameter("color");
+
+if(color.equalsIgnoreCase("etc")){
+	out.println(color);
+	color = "gray";
+}
+%>
+<body bgcolor = <%= color %>>
+
 </body>
 </html>
