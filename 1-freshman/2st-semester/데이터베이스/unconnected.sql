@@ -165,10 +165,10 @@ select 이름, 휴대폰번호 from 학생
  where 휴대폰번호 is null;
 
 -- 예제5-16) '여' 학생이거나 'A' 학점을 받은 학생의 학번을 검색하시오
-select 학생.학번 from 학생
+select distinct 학생.학번 from 학생
  inner join 수강 on 학생.학번 = 수강.학번
- where 학생.성별 = '여' or 수강.평가학점='A'
- group by 학생.학번;
+ where 학생.성별 = '여' or 수강.평가학점='A';
+-- group by 학생.학번;
 
 -- 예제5-18) 전체 학생의 기본 정보와 모든 수강 정보를 검색하시오 (SELECT FROM WHERE 방법)
 select * from 학생, 수강, 과목
@@ -177,8 +177,8 @@ select * from 학생, 수강, 과목
  
 -- 예제5-18) 전체 학생의 기본 정보와 모든 수강 정보를 검색하시오 (SELECT FROM ON 방법)
 select * from 학생
- inner join 수강 on 학생.학번 = 수강.학번
- inner join 과목 on 과목.과목번호 = 수강.과목번호;
+ inner join 수강 on 학생.학번 = 수강.학번;
+-- inner join 과목 on 과목.과목번호 = 수강.과목번호;
 
 -- 예제5-19) 학생 중에서 과목번호가 c002 인 과목을 수강한 학생의 학번과 이름, 과목번호, 변환중간성적(학생별중간성적의 10% 가산점수)을 검색하시오 (SELECT FROM WHERE 방법)
 select 학생.학번, 이름, 과목번호, (중간성적 * 0.1) as 변환중간성적 from 학생, 수강
