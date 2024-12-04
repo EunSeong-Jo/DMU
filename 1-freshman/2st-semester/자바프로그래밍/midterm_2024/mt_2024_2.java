@@ -24,11 +24,11 @@ public class mt_2024_2 {
 		case 5:
 			System.out.println("5번이 나왔습니다.");
 			break;
-		case 6:
-			System.out.println("6번이 나왔습니다.");
-			break;
-		// default:
+		// case 6:
 			// System.out.println("6번이 나왔습니다.");
+			// break;
+		default:
+			System.out.println("6번이 나왔습니다.");
 		}
 		
 		/*
