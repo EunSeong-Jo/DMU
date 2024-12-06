@@ -171,5 +171,3 @@ insert into stu values('s4','신현주','건축',21);
 
 select * from pro;
 select * from stu;
-
-select sname, dept, sage from 
