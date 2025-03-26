@@ -13,6 +13,8 @@ public abstract class Animal {
 	protected String name;
     protected int age;
     
+    def(a, b)
+
     // Animal 메소드를 설정해서 이름과 나이를 리턴
     public Animal(String name, int age) {
         this.name = name;

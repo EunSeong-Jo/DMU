@@ -21,6 +21,7 @@ public class Zoo {
         		// animal은 animals의 값을 받아오고, animals는 AnimalBehavior 타입이기 때문에
         		// displayInfo를 받아올 수 있는 Animal 클래스로 강제 형변환
                 ((Animal) animal).displayInfo();
+
         	}
             
         	// 강제로 형변환이 이루어진 if문이 끝났음으로 다시 AnimalBehavior 타입으로 돌아옴
