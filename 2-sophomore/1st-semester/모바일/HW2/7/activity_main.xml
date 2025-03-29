@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+        style : 스타일(디자인) 설정
+        layout_width : 크기(넓이) 설정
+        layout_height : 크기(높이) 설정
+        layout_marginStart : 왼쪽(Start)부터의 거리
+        layout_marginTop : 위쪽(Top)부터의 거리
+        clickable : 클릭 가능 여부
+        enabled : 활성화 여부
+        rotation : 회전 상태
+
+        - ConstraintLayout 은 제약 조건을 반드시 설정해 줘야 동작함 (X, Y축에 대한 조건 설정)
+        - 제약 조건이 없다면 객체의 초기 위치를 모르기 때문에 오류가 발생
+        app:layout_constraintStart_toStartOf : ConstraintLayout 뷰의 시작 위치 (왼쪽)
+        app:layout_constraintTop_toTopOf : ConstraintLayout 뷰의 시작 위치 (위)
+    -->
+
+    <Button
+        android:id="@+id/Btn1"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="331dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="500dp"
+        android:clickable="false"
+        android:enabled="false"
+        android:rotation="0"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="연습문제 4-7"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="52dp"
+        android:text="( 232678 조은성 )"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ChkEn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="132dp"
+        android:text="Enabled 속성"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ChkClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="200dp"
+        android:text="Clickable 속성"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Chk45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="272dp"
+        android:text="45도 회전"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

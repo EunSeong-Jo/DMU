@@ -2,9 +2,10 @@ package Day0317;
 // 클래스
 public class Car {
 	// 필드
-	private String color;
-	private int speed;
-	
+	// private String color;
+	// private int speed;
+	protected String color;
+	protected int speed;
 	
 	static int carCount = 0;
 	
@@ -16,9 +17,9 @@ public class Car {
 	}
 	
 	// 생성자
-	Car(){ } // 기본 생성자
+	public Car(){ } // 기본 생성자
 	
-	Car(String color, int speed){
+	public Car(String color, int speed){
 		this.color = color;
 		this.speed = speed;
 		
@@ -26,7 +27,7 @@ public class Car {
 	}
 	
 	// 메소드
-	int upSpeed(int value){
+	public int upSpeed(int value){
 		speed = speed + value;
 		if(speed > 200) {
 			speed = 200;

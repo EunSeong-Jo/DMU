@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Edit1"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="숫자1" />
+
+    <EditText
+        android:id="@+id/Edit2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="숫자2" />
+
+    <Button
+        android:id="@+id/BtnAdd"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="더하기" />
+
+    <Button
+        android:id="@+id/BtnSub"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="빼기" />
+
+    <Button
+        android:id="@+id/BtnMul"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="곱하기" />
+
+    <Button
+        android:id="@+id/BtnDiv"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="나누기" />
+
+    <TextView
+        android:id="@+id/TextResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#FF0000"
+        android:layout_margin="10dp"
+        android:text="계산 결과 : " />
+
+</LinearLayout>

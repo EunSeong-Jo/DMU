@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- HW2_7 설명과 동일 -->
+
+    <!--
+        background : 배경색
+        focusable : 선택(클릭), 키보드 입력이 가능한지 설정
+        gravity : 객체 내부의 정렬 방향 지정
+        orientation : 객체의 정렬 방향 지정
+    -->
+
+    <!-- 회전하기 버튼을 레이아웃(LinearLayout) 형태로 제작 -->
+    <!-- LinearLayout을 사용하여 틀 안에 객체들을 넣어서 버튼처럼 보이게 만듬 -->
+    <!-- 버튼을 다양한 모양으로 커스텀이 가능하고 추후 재사용이 용이함 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="연습문제 4-9"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="56dp"
+        android:text="( 232678 조은성 )"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/rotateButton"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="132dp"
+        android:background="#DDDDDD"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jellybean" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="회전하기"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jellybean" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mainImg"
+        android:layout_width="240dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="304dp"
+        android:src="@drawable/api23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
