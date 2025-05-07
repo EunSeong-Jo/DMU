@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 봄 저축 챌린지</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="challenge spring">
+
+  <div class="goal-header">
+    🌸 봄 목표 금액: <span id="goalAmount">300,000</span>원
+  </div>
+
+  <div class="stage">
+    <!-- 배경 오브젝트 -->
+    <div class="object bush spring" style="left: 20px; bottom: 20px;"></div>
+    <div class="object tree spring" style="left: 200px; bottom: 10px;"></div>
+    <div class="object grass spring" style="left: 100px; bottom: 0px;"></div>
+    <div class="object water spring" style="left: 280px; bottom: 5px;"></div>
+
+    <!-- 계단 -->
+    <div class="step step1"></div>
+    <div class="step step2"></div>
+    <div class="step step3"></div>
+
+    <!-- 캐릭터 -->
+    <div class="character" id="character"></div>
+  </div>
+
+  <div class="control-panel">
+    <button onclick="saveMoney()">💰 저금하기</button>
+    <div id="statusText"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
