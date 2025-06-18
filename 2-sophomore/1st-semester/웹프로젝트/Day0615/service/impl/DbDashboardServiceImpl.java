@@ -1,0 +1,30 @@
+package kr.ac.dongyang.website.jspwebsite.service.impl;
+
+import kr.ac.dongyang.website.jspwebsite.dao.BoardDao;
+import kr.ac.dongyang.website.jspwebsite.dao.MemberDao;
+import kr.ac.dongyang.website.jspwebsite.dto.DashboardDto;
+import kr.ac.dongyang.website.jspwebsite.service.DashboardService;
+
+// DashboardService 인터페이스의 실제 구현 클래스
+// 회원 수, 게시글 수 등을 DB에서 조회하여 대시보드 정보 제공
+public class DbDashboardServiceImpl implements DashboardService {
+
+    // 대시보드에 필요한 주요 정보를 반환하는 메서드
+    @Override
+    public DashboardDto mainInfo() {
+
+        // 회원 수 구하기: MemberDao를 이용해 회원 목록을 조회하고 크기를 계산
+        MemberDao memberDao = new MemberDao();
+        int memberCount = memberDao.getMemberList().size();
+
+        // 게시글 수 구하기: BoardDao를 이용해 게시글 목록을 조회하고 크기를 계산
+        BoardDao boardDao = new BoardDao();
+        int boardCount = boardDao.getBoardList().size();
+
+        // DashboardDto 객체를 생성하여 반환
+        return DashboardDto.builder()
+                .memberCount(memberCount)           // 회원 수 세팅
+                .bbsContentsCount(boardCount)       // 게시글 수 세팅
+                .build();
+    }
+}
