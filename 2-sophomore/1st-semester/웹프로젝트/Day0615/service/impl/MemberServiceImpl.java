@@ -15,8 +15,8 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public List<MemberDto> getMemberList() {
-        MemberDao memberDao = new MemberDao();                 // DAO 객체 생성
-        List<MemberDto> memberList = memberDao.getMemberList(); // 회원 목록 조회
+        MemberDao memberDao = new MemberDao();                 // 📝 DAO 객체 생성 → 시험 출제 가능
+        List<MemberDto> memberList = memberDao.getMemberList(); // 📝 DAO에서 회원 목록 가져오기 → 시험 출제 가능
         return memberList;
     }
 
@@ -25,8 +25,8 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public MemberDto getMember(String userId) {
-        MemberDao memberDao = new MemberDao();                 // DAO 객체 생성
-        MemberDto member = memberDao.getMember(userId);        // 회원 단건 조회
+        MemberDao memberDao = new MemberDao();                 // 📝 DAO 객체 생성 → 시험 출제 가능
+        MemberDto member = memberDao.getMember(userId);        // 📝 특정 회원 조회 메서드 호출 → 시험 출제 가능
         return member;
     }
 
@@ -35,8 +35,8 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public boolean addMember(MemberDto member) {
-        MemberDao memberDao = new MemberDao();                 // DAO 객체 생성
-        boolean result = memberDao.addMember(member);          // 회원 등록 요청
+        MemberDao memberDao = new MemberDao();                 // 📝 DAO 객체 생성 → 시험 출제 가능
+        boolean result = memberDao.addMember(member);          // 📝 회원 추가 로직 → 시험 출제 가능
         return result;                                         // 성공 여부 반환
     }
 
@@ -45,8 +45,8 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public boolean updateMember(MemberDto member) {
-        MemberDao memberDao = new MemberDao();                 // DAO 객체 생성
-        boolean result = memberDao.updateMember(member);       // 회원 정보 수정 요청
+        MemberDao memberDao = new MemberDao();                 // 📝 DAO 객체 생성 → 시험 출제 가능
+        boolean result = memberDao.updateMember(member);       // 📝 회원 수정 로직 → 시험 출제 가능
         return result;
     }
 
@@ -55,8 +55,8 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public boolean deleteMember(String userId) {
-        MemberDao memberDao = new MemberDao();                 // DAO 객체 생성
-        boolean result = memberDao.deleteMember(userId);       // 해당 ID 회원 삭제 요청
+        MemberDao memberDao = new MemberDao();                 // 📝 DAO 객체 생성 → 시험 출제 가능
+        boolean result = memberDao.deleteMember(userId);       // 📝 회원 삭제 로직 → 시험 출제 가능
         return result;
     }
 }

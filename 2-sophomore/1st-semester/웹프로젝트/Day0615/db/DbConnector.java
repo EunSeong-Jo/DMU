@@ -12,7 +12,7 @@ public class DbConnector {
     public static Connection getConnection() {
         try {
             // MySQL JDBC 드라이버를 메모리에 로드
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");  // 📝 JDBC 드라이버 로딩 → 시험 출제 가능
 
         } catch (ClassNotFoundException e) {
             // 드라이버 클래스가 없을 경우 예외 출력
@@ -27,20 +27,20 @@ public class DbConnector {
         String dbInstance = "jsp_db";        // 접속할 DB 스키마 이름
 
         // 접속 URL 문자열 생성 (JDBC 규약에 맞게 구성)
-        String url = String.format("jdbc:mysql://%s:%d/%s", host, port, dbInstance);
+        String url = String.format("jdbc:mysql://%s:%d/%s", host, port, dbInstance);  // 📝 JDBC URL 구성 → 시험 출제 가능
 
         Connection connection = null;        // 최종 반환할 Connection 객체
 
         try {
             // DB에 실제로 연결 수행
-            connection = DriverManager.getConnection(url, id, pwd);
+            connection = DriverManager.getConnection(url, id, pwd);  // 📝 DB 연결 → 시험 출제 가능
         } catch (SQLException e) {
             // 연결 실패 시 예외 출력
             e.printStackTrace();
         }
 
         // 연결된 Connection 객체 반환 (실패 시 null)
-        return connection;
+        return connection;  // 📝 DB 연결 반환 → 시험 출제 가능
     }
 
 }

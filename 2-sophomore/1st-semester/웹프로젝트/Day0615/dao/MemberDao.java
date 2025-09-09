@@ -17,17 +17,17 @@ public class MemberDao {
     public List<MemberDto> getMemberList() {
 
         List<MemberDto> memberList = new ArrayList<>(); // 결과를 담을 리스트 생성
-        Connection connection = DbConnector.getConnection(); // DB 연결 객체 생성
+        Connection connection = DbConnector.getConnection(); // DB 연결 객체 생성  // 📝 DB 연결 획득 → 시험 출제 가능
 
         // 회원 목록을 최신순으로 정렬하여 조회하는 SQL
         String sql = "select user_id, user_name, password, create_dt, update_dt " +
                 "from member order by update_dt desc, create_dt desc";
         try {
             // SQL 실행을 위한 PreparedStatement 생성
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);  // 📝 SQL 준비 → 시험 출제 가능
 
             // SQL 실행 및 결과 반환
-            ResultSet rs = preparedStatement.executeQuery();
+            ResultSet rs = preparedStatement.executeQuery();  // 📝 결과 집합 받기 → 시험 출제 가능
 
             // 결과 셋에서 한 행씩 MemberDto 객체로 변환하여 리스트에 추가
             while (rs.next()) {
@@ -37,8 +37,8 @@ public class MemberDao {
                         .password(rs.getString("password"))
                         .createDt(rs.getDate("create_dt"))
                         .updateDt(rs.getDate("update_dt"))
-                        .build();
-                memberList.add(member); // 리스트에 추가
+                        .build();  // 📝 DTO 빌더로 객체 생성 → 시험 출제 가능
+                memberList.add(member); // 리스트에 추가  // 📝 결과를 리스트에 추가 → 시험 출제 가능
             }
 
         } catch (Exception e) {
@@ -68,20 +68,20 @@ public class MemberDao {
     public boolean addMember(MemberDto member) {
         boolean result = false;
 
-        Connection connection = DbConnector.getConnection(); // DB 연결
+        Connection connection = DbConnector.getConnection(); // DB 연결  // 📝 DB 연결 획득 → 시험 출제 가능
 
         // 회원 등록을 위한 INSERT SQL 문
         String sql = "insert into member (user_id, user_name, password) values (?, ?, ?)";
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);  // 📝 SQL 준비 → 시험 출제 가능
 
             // 바인딩: SQL의 ? 자리에 값 채워넣기
-            preparedStatement.setString(1, member.getUserId());
-            preparedStatement.setString(2, member.getUserName());
-            preparedStatement.setString(3, member.getPassword());
+            preparedStatement.setString(1, member.getUserId());  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
+            preparedStatement.setString(2, member.getUserName());  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
+            preparedStatement.setString(3, member.getPassword());  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
 
             // SQL 실행 후 영향받은 행 수 확인
-            int affectedRow = preparedStatement.executeUpdate();
+            int affectedRow = preparedStatement.executeUpdate();  // 📝 DB에 삽입/수정/삭제 실행 → 시험 출제 가능
             if (affectedRow > 0) {
                 result = true; // 성공 여부 플래그 설정
             }
@@ -98,19 +98,19 @@ public class MemberDao {
     public boolean updateMember(MemberDto member) {
         boolean result = false;
 
-        Connection connection = DbConnector.getConnection(); // DB 연결
+        Connection connection = DbConnector.getConnection(); // DB 연결  // 📝 DB 연결 획득 → 시험 출제 가능
 
         // 회원 정보 업데이트 SQL (비밀번호, 이름 변경 + 수정일 갱신)
         String sql = "update member set user_name = ?, password = ?, update_dt = now() where user_id = ?";
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);  // 📝 SQL 준비 → 시험 출제 가능
 
             // 바인딩
-            preparedStatement.setString(1, member.getUserName());
-            preparedStatement.setString(2, member.getPassword());
-            preparedStatement.setString(3, member.getUserId());
+            preparedStatement.setString(1, member.getUserName());  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
+            preparedStatement.setString(2, member.getPassword());  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
+            preparedStatement.setString(3, member.getUserId());  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
 
-            int affectedRow = preparedStatement.executeUpdate();
+            int affectedRow = preparedStatement.executeUpdate();  // 📝 DB에 삽입/수정/삭제 실행 → 시험 출제 가능
             if (affectedRow > 0) {
                 result = true; // 수정 성공 시 true 반환
             }
@@ -127,17 +127,17 @@ public class MemberDao {
     public boolean deleteMember(String userId) {
         boolean result = false;
 
-        Connection connection = DbConnector.getConnection(); // DB 연결
+        Connection connection = DbConnector.getConnection(); // DB 연결  // 📝 DB 연결 획득 → 시험 출제 가능
 
         // 회원 삭제 SQL 문
         String sql = "delete from member where user_id = ?";
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);  // 📝 SQL 준비 → 시험 출제 가능
 
             // userId를 바인딩
-            preparedStatement.setString(1, userId);
+            preparedStatement.setString(1, userId);  // 📝 PreparedStatement에 값 바인딩 → 시험 출제 가능
 
-            int affectedRow = preparedStatement.executeUpdate();
+            int affectedRow = preparedStatement.executeUpdate();  // 📝 DB에 삽입/수정/삭제 실행 → 시험 출제 가능
             if (affectedRow > 0) {
                 result = true; // 삭제 성공 시 true 반환
             }

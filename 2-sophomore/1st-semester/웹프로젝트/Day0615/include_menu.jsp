@@ -2,14 +2,14 @@
 
 <%
     // 세션에서 로그인 상태 확인
-    boolean isLogin = session.getAttribute("userId") != null;
+    boolean isLogin = session.getAttribute("userId") != null;  // 📝 session 객체 → 로그인 여부 확인 → 시험 출제 가능
 
     // 로그인된 사용자의 이름 가져오기
-    String userName = (String) session.getAttribute("userName");
+    String userName = (String) session.getAttribute("userName");  // 📝 session 객체 → 사용자 이름 가져오기 → 시험 출제 가능
 %>
 
 <div>
-    <% if (isLogin) { %>
+    <% if (isLogin) { %>  // 📝 조건문을 통한 로그인 상태 분기 처리 → 시험 출제 가능
     <!-- 로그인된 경우, 우측 상단에 사용자 이름 표시 -->
     <p style="text-align: right"><%= userName %>님 환영합니다.</p>
     <% } %>
@@ -44,9 +44,9 @@
         <!-- 로그인 상태에 따라 로그인/로그아웃 링크 표시 -->
         <li>
             <% if (isLogin) { %>
-            <a href="/logout.jsp">로그아웃</a>
+            <a href="/logout.jsp">로그아웃</a>  // 📝 로그아웃 처리 링크 (`logout.jsp`) → 시험 출제 가능
             <% } else { %>
-            <a href="/login.jsp">로그인</a>
+            <a href="/login.jsp">로그인</a>  // 📝 로그인 페이지 링크 (`login.jsp`) → 시험 출제 가능
             <% } %>
         </li>
     </ul>

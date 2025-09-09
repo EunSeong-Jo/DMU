@@ -35,7 +35,10 @@
 
     <%
         // 서비스 객체를 통해 회원 목록 조회
+        // 📝 서비스 객체 생성 (`new MemberServiceImpl()`) → 시험 출제 가능
         MemberService memberService = new MemberServiceImpl();
+
+        // 📝 회원 목록 조회 메서드 호출 (`getMemberList()`) → 시험 출제 가능
         List<MemberDto> memberList = memberService.getMemberList();
 
         // 출력 순서를 위해 총 개수 저장
@@ -43,6 +46,7 @@
         int i = 0;
 
         // 회원 목록 반복 출력
+        // 📝 향상된 for문 (`for (MemberDto member : memberList)`) → 시험 출제 가능
         for (MemberDto member : memberList) {
     %>
     <tr>
@@ -51,6 +55,7 @@
 
         <!-- 회원 ID (수정 페이지 링크로 연결) -->
         <td>
+            // 📝 수정 링크에 회원 ID를 파라미터로 전달 (`member-edit.jsp?user_id=...`) → 시험 출제 가능
             <a href="member-edit.jsp?user_id=<%= member.getUserId() %>">
                 <%= member.getUserId() %>
             </a>
@@ -70,10 +75,11 @@
 
         <!-- 삭제 버튼: 클릭 시 confirm 창 띄운 후 삭제 페이지로 이동 -->
         <td>
+            // 📝 삭제 버튼에 회원 ID를 파라미터로 전달 (`member-delete.jsp?user_id=...`) → 시험 출제 가능
             <button
-                    onclick="return confirm('삭제하시겠습니까?') ? location.href= 'member-delete.jsp?user_id=<%=member.getUserId()%>' : false;"
-                    type="button">
-                삭제
+                    onclick="return confirm('삭제하시겠습니까?') ? location.href =
+                            'member-delete.jsp?user_id=<%=member.getUserId()%>' : false;" type="button">
+            삭제
             </button>
         </td>
     </tr>

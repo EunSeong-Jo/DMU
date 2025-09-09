@@ -10,13 +10,13 @@
 <body>
 
 <!-- 공통 메뉴 영역 삽입 -->
-<jsp:include page="include_menu.jsp"/>
+<jsp:include page="include_menu.jsp"/>  // 📝 JSP include 지시어 → 공통 메뉴 삽입 (`include_menu.jsp`) → 시험 출제 가능
 
 <!-- 대시보드 제목 -->
 <h1>대시 보드</h1>
 
 <!-- 대시보드 정보 삽입 (회원 수, 게시글 수 출력) -->
-<jsp:include page="include_dashboard.jsp"/>
+<jsp:include page="include_dashboard.jsp"/>  // 📝 JSP include 지시어 → 대시보드 내용 삽입 (`include_dashboard.jsp`) → 시험 출제 가능
 
 </body>
 </html>
