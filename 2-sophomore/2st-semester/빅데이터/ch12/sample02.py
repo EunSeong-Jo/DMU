@@ -2,9 +2,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# from ch11.common_functon import save_csv
+from ch11.common_functon import save_csv
 
-file_name = 'C:/Users/asus/DMU/2-sophomore/2st-semester/빅데이터/ch11/survey_raw.csv'
+file_name = '../ch11/survey_raw.csv'
 df_raw = pd.read_csv(file_name)
 
 #print('-'*50)
@@ -32,6 +32,14 @@ print('-'*50)
 print(data_lang3)
 
 data_lang3.nlargest(20).plot.pie(figsize=(10, 10), autopct='%1.2f%%')
-# plt.tight_layout()
-# plt.show()
-# plt.savefig('./lang_data.png')
+plt.tight_layout()
+#plt.show()
+plt.savefig('./lang_data.png')
+
+
+
+
+
+
+
+
