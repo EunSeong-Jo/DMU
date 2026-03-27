@@ -1,0 +1,31 @@
+1. `datetime` 패키지:
+   - `datetime.datetime.now()`: 현재 날짜와 시간을 반환합니다.
+   - `datetime.datetime()`: 지정된 날짜와 시간을 생성합니다.
+   - `datetime.weekday()`: 해당 날짜의 요일을 숫자로 반환합니다.
+
+2. `math` 패키지:
+   - `math.pi`, `math.e`: 원주율과 자연로그 상수를 반환합니다.
+   - `math.sqrt()`: 제곱근을 계산합니다.
+   - `math.ceil()`: 숫자를 올림 처리합니다.
+   - `math.floor()`: 숫자를 내림 처리합니다.
+   - `math.trunc()`: 소수점을 버리고 정수 부분만 반환합니다.
+
+3. `pydataset` 패키지:
+   - `pydataset.data()`: 내장된 데이터셋을 불러옵니다.
+   - `pydataset.data('dataset_name')`: 특정 데이터셋을 불러옵니다.
+
+4. `matplotlib.pyplot` 패키지:
+   - `plt.scatter()`: 산점도를 그립니다.
+   - `plt.show()`: 그래프를 화면에 출력합니다.
+   - `plt.rc()`: 폰트 및 그래프 설정을 변경합니다.
+
+5. `seaborn` 패키지:
+   - `sns.scatterplot()`: 산점도를 그립니다.
+   - `sns.scatterplot(hue=)`: 그룹별로 색상을 다르게 지정하여 산점도를 그립니다.
+
+6. Python 기본 함수:
+   - `print()`: 값을 출력합니다.
+   - `type()`: 데이터 타입을 확인합니다.
+   - `input()`: 사용자로부터 입력을 받습니다.
+   - `abs()`, `min()`, `max()`, `round()`: 기본적인 수학 연산 함수들입니다.
+   - `help()`: 특정 함수에 대한 도움말을 출력합니다.

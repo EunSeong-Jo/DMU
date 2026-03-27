@@ -1,0 +1,8 @@
+
+ul.menu li { display: inline-block; padding: 0 20px; }
+
+
+
+.member-add label {
+    display:inline-block; width: 80px;
+}

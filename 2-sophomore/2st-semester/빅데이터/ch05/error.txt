@@ -1,0 +1,54 @@
+C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Scripts\python.exe C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\ch05\sample02.py
+Traceback (most recent call last):
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\ch05\sample02.py", line 13, in <module>
+    jumsu_df.plot.line()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\pandas\plotting\_core.py", line 1100, in line
+    return self(kind="line", x=x, y=y, **kwargs)
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\pandas\plotting\_core.py", line 1030, in __call__
+    return plot_backend.plot(data, kind=kind, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\pandas\plotting\_matplotlib\__init__.py", line 71, in plot
+    plot_obj.generate()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\pandas\plotting\_matplotlib\core.py", line 500, in generate
+    fig = self.fig
+          ^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 36, in pandas._libs.properties.CachedProperty.__get__
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\pandas\plotting\_matplotlib\core.py", line 555, in fig
+    return self._axes_and_fig[1]
+           ^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 36, in pandas._libs.properties.CachedProperty.__get__
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\pandas\plotting\_matplotlib\core.py", line 580, in _axes_and_fig
+    fig = self.plt.figure(figsize=self.figsize)
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\matplotlib\pyplot.py", line 1041, in figure
+    manager = new_figure_manager(
+        num, figsize=figsize, dpi=dpi,
+        facecolor=facecolor, edgecolor=edgecolor, frameon=frameon,
+        FigureClass=FigureClass, **kwargs)
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\matplotlib\pyplot.py", line 551, in new_figure_manager
+    return _get_backend_mod().new_figure_manager(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\matplotlib\backend_bases.py", line 3504, in new_figure_manager
+    return cls.new_figure_manager_given_figure(num, fig)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\matplotlib\backend_bases.py", line 3509, in new_figure_manager_given_figure
+    return cls.FigureCanvas.new_manager(figure, num)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\matplotlib\backend_bases.py", line 1785, in new_manager
+    return cls.manager_class.create_with_canvas(cls, figure, num)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\214\PycharmProjects\dy-202502-bigdata-app-programming-qb\.venv\Lib\site-packages\matplotlib\backends\_backend_tk.py", line 535, in create_with_canvas
+    window = tk.Tk(className="matplotlib")
+  File "C:\Users\214\AppData\Local\Programs\Python\Python313\Lib\tkinter\__init__.py", line 2459, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: Can't find a usable init.tcl in the following directories:
+    C:/Users/214/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/Users/214/PycharmProjects/dy-202502-bigdata-app-programming-qb/.venv/lib/tcl8.6 C:/Users/214/PycharmProjects/dy-202502-bigdata-app-programming-qb/lib/tcl8.6 C:/Users/214/PycharmProjects/dy-202502-bigdata-app-programming-qb/.venv/library C:/Users/214/PycharmProjects/dy-202502-bigdata-app-programming-qb/library C:/Users/214/PycharmProjects/dy-202502-bigdata-app-programming-qb/tcl8.6.14/library C:/Users/214/PycharmProjects/tcl8.6.14/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+
+종료 코드 1(으)로 완료된 프로세스

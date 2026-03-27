@@ -1,0 +1,30 @@
+1. `math` 패키지:
+   - `math.pi`: 원주율 상수를 반환합니다.
+   - `math.sqrt()`: 제곱근을 계산합니다.
+
+2. Python 제어 흐름 (Control Flow):
+   - `if-else` 문: 조건에 따라 다른 코드를 실행합니다.
+     - 예: `if n % 2 == 0: print('짝수')`
+   - `elif` 문: 여러 조건을 처리합니다.
+     - 예: 성적에 따라 A, B, C, D, F 학점을 출력하는 코드.
+   - 삼항 연산자: 조건에 따라 값을 할당합니다.
+     - 예: `s = '성인' if age >= 20 else '미성년자'`
+   - `match-case` 문: 특정 값에 따라 케이스를 처리합니다.
+     - 예: `match value: case 'apple': result = "사과"`
+
+3. Python 반복문 (Loops):
+   - `for` 문: 리스트나 범위를 순회하며 반복합니다.
+     - 예: `for x in range(1, 6): print(x)`
+   - `while` 문: 조건이 참일 동안 반복합니다.
+     - 예: `while i <= 10: sum += i`
+
+4. Python 함수 (Functions):
+   - 기본 함수 정의 및 호출:
+     - `def hello()`: 간단한 함수를 정의하고 호출하는 예제.
+     - `def hi(one)`: 인수를 받는 함수.
+   - 기본값이 있는 함수: 인수에 기본값을 설정할 수 있습니다.
+     - 예: `def circle_area(r = 1)`: 기본값이 1인 반지름을 가진 원의 면적을 계산.
+   - 값을 반환하는 함수: 계산 결과를 반환합니다.
+     - 예: `def sum_sub(x, y): return x + y, x - y`
+   - 람다 함수: 짧은 익명 함수 정의.
+     - 예: `(lambda a, b: m.sqrt(a**2 + b**2))(3, 4)`

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor = "gray">
+
+<!-- method="post" -->
+<form method="get" action="1002_1.jsp">
+
+성명 : <input type="text" name="name"><p>
+주소 : <input type="text" name="addr"><p>
+연락처 : <input type="text" name="tel"><p>
+
+<input type="submit" value="보내기">
+
+</form>
+
+<br> ---------------------------------------- <br>
+
+<a href = "1002_2.jsp?strID=apple&strPwd=a123">로그인</a>
+
+<br> ---------------------------------------- <br>
+
+<form method="post" action="1002_3.jsp">
+
+성명 : <input type="text" name="name" value="kim"><p>
+학번 : <input type="text" name="studentNum"><p>
+
+성별 : 
+남자 <input type="radio" name="mw" value="man" checked>
+여자 <input type="radio" name="mw" value="woman"><p>
+
+국적 : <select name="country">
+<option SELECTED value="대한민국">대한민국</option>
+<option value="일본">일본</option>
+<option value="중국">중국</option>
+<option value="터키">터키</option>
+<option value="태국">태국</option>
+</select><p>
+
+<input type="submit" value="보내기">
+
+</form>
+
+<br> ---------------------------------------- <br>
+
+<h1>If-else Example</h1>
+
+<FORM METHOD=POST ACTION="1002_4.jsp">
+
+이름 : <INPUT TYPE="text" NAME="name"><p>
+좋아하는 색깔 : <SELECT NAME="color">
+
+<option value="blue" selected>파란색</option>
+<option value="red">붉은색</option>
+<option value="orange">오렌지색</option>
+<option value="etc">기타</option>
+</SELECT><p>
+
+<INPUT TYPE="submit" VALUE="보내기">
+</FORM>
+
+</body>
+</html>

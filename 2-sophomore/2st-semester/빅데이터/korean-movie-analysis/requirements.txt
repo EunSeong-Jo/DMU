@@ -1,0 +1,27 @@
+# 데이터 수집 및 처리
+requests==2.31.0
+beautifulsoup4==4.12.2
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# 데이터 분석
+pandas==2.1.3
+numpy==1.24.3
+openpyxl==3.1.2
+
+# 자연어 처리
+konlpy==0.6.0
+JPype1==1.4.1
+
+# 머신러닝
+scikit-learn==1.3.2
+scipy==1.11.4
+
+# 시각화
+matplotlib==3.8.2
+seaborn==0.13.0
+wordcloud==1.9.3
+
+# 유틸리티
+python-dotenv==1.0.0
+tqdm==4.66.1
