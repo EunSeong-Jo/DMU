@@ -1,0 +1,10 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>학생 성적표</h1>
+    {% for table in tables %}
+        {{ table | safe }}
+    {% endfor %}
+</body>
+</html>
