@@ -1,0 +1,41 @@
+(venv) PS> python data_collection.py
+▶ API 호출 중...
+▶ 응답 상태 코드: 200
+▶ API 호출 성공!
+
+▶ 응답 구조 확인 (최상위 키):
+["response"]
+
+▶ 결과 코드: 00
+▶ 결과 메시지: NORMAL_CODE
+▶ 전체 데이터 수: 40
+▶ items의 타입: <class 'list'>
+▶ 가져온 데이터 수: 40
+
+▶ DataFrame 크기: (40, 23)
+▶ 컬럼 목록: ['so2Grade', 'coFlag', 'khaiValue', 'so2Value', 'coValue', 'pm25Flag', 'pm10Flag', 'o3Grade', 'pm10Value', 'khaiGrade', 'pm25Value', 'sidoName', 'no2Flag', 'no2Grade', 'o3Flag', 'pm25Grade', 'so2Flag', 'dataTime', 'coGrade', 'no2Value', 'stationName', 'pm10Grade', 'o3Value']
+
+▶ 처음 5행:
+  so2Grade coFlag khaiValue so2Value coValue pm25Flag pm10Flag o3Grade  ... pm25Grade so2Flag          dataTime coGrade no2Value stationName pm10Grade o3Value
+0        1   None        77    0.001     0.4     None     None       2  ...         2    None  2026-03-19 01:00       1    0.017         정릉로         2   0.040
+1        1   None        72    0.003     0.5     None     None       2  ...         2    None  2026-03-19 01:00       1    0.008         도봉구         2   0.050
+2        1   None        82    0.003     0.5     None     None       2  ...         2    None  2026-03-19 01:00       1    0.013         은평구         2   0.038
+3        1   None        74    0.004     0.8     None     None       2  ...         2    None  2026-03-19 01:00       1    0.015        서대문구         2   0.040
+4        1   None        72    0.002     0.3     None     None       2  ...         2    None  2026-03-19 01:00       1    0.012         마포구         2   0.043
+
+[5 rows x 23 columns]
+
+▶ 선택된 컬럼: ['측정소', '측정일시', '미세먼지(PM10)', '초미세먼지(PM2.5)', '오존(O3)', '이산화질소(NO2)', '일산화탄소(CO)', '아황산가스(SO2)', 'PM10등급', 'PM25등급']
+    측정소              측정일시 미세먼지(PM10) 초미세먼지(PM2.5) 오존(O3) 이산화질소(NO2) 일산화탄소(CO) 아황산가스(SO2) PM10등급 PM25등급
+0   정릉로  2026-03-19 01:00         45           23  0.040      0.017       0.4      0.001      2      2
+1   도봉구  2026-03-19 01:00         40           16  0.050      0.008       0.5      0.003      2      2
+2   은평구  2026-03-19 01:00         41           22  0.038      0.013       0.5      0.003      2      2
+3  서대문구  2026-03-19 01:00         36           25  0.040      0.015       0.8      0.004      2      2
+4   마포구  2026-03-19 01:00         31           16  0.043      0.012       0.3      0.002      2      2
+5   신촌로  2026-03-19 01:00         46           22  0.033      0.021       0.4      0.002      2      2
+6   강서구  2026-03-19 01:00         30           17  0.039      0.014       0.3      0.003      2      2
+7  공항대로  2026-03-19 01:00         34           15  0.034      0.020       0.3      0.002      2      2
+8   구로구  2026-03-19 01:00         36           11  0.043      0.012       0.3      0.002      2      2
+9  영등포구  2026-03-19 01:00         24           13  0.044      0.011       0.3      0.002      2      2
+
+▶ 'air_quality_seoul.csv' 파일로 저장 완료!
